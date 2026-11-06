@@ -4,9 +4,9 @@
   "description": "Atividade 01 - Cadastro de Clientes da Electronic",
   "license": "ISC",
   "author": "Juan Lima",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   }
 }

@@ -28,4 +28,9 @@ export default class Pessoa
     {
         this.#endereco = endereco;
     }
+
+    apresentar() 
+    {
+        return `Nome: ${this.nome}\nEndereço: ${this.endereco}`;
+    }
 }

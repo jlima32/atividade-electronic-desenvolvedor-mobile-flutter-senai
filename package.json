@@ -1,0 +1,12 @@
+{
+  "name": "atv-electronic",
+  "version": "1.0.0",
+  "description": "Atividade 01 - Cadastro de Clientes da Electronic",
+  "license": "ISC",
+  "author": "Juan Lima",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

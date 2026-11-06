@@ -11,22 +11,26 @@ export default class Pessoa
 
     get nome()
     {
-        return this.nome;
+        return this.#nome;
     }
 
     set nome(valor)
     {
+        if(valor.length < 3)
+        {
+            throw new Error("Nome muito curto");
+        }
         this.#nome = valor;
     }
 
     get endereco()
     {
-        return this.endereco;
+        return this.#endereco;
     }
 
     set endereco(valor)
     {
-        this.#endereco = endereco;
+        this.#endereco = valor;
     }
 
     apresentar() 

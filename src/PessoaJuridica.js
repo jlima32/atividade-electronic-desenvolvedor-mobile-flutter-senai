@@ -1,4 +1,4 @@
-import Pessoa from "./Pessoa";
+import Pessoa from "./Pessoa.js";
 
 export default class PessoaJuridica extends Pessoa
 {
@@ -14,7 +14,7 @@ export default class PessoaJuridica extends Pessoa
 
     get cnpj()
     {
-        return this.cnpj;
+        return this.#cnpj;
     }
 
     set cnpj(valor)
@@ -34,6 +34,6 @@ export default class PessoaJuridica extends Pessoa
 
     apresentar() 
     {
-        return `PESSOA JURÍDICA\n${super.apresentar()}\nCNPJ: ${this.cnpj}\nRazão social: ${this.razaoSocial}`;
+        return `\n${super.apresentar()}\nCNPJ: ${this.cnpj}\nRazão social: ${this.razaoSocial}`;
     }
 }

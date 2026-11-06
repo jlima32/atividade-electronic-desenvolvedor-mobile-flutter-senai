@@ -15,7 +15,7 @@ export default class Endereco
 
     get logradouro()
     {
-        return this.logradouro;
+        return this.#logradouro;
     }
 
     set logradouro(valor)
@@ -25,7 +25,7 @@ export default class Endereco
 
     get numero()
     {
-        return this.numero;
+        return this.#numero;
     }
     set numero(valor)
     {
@@ -34,7 +34,7 @@ export default class Endereco
 
     get cidade()
     {
-        return this.cidade;
+        return this.#cidade;
     }
 
     set cidade(valor)
@@ -44,11 +44,15 @@ export default class Endereco
 
     get uf()
     {
-        return this.uf;
+        return this.#uf;
     }
     set uf(valor)
     {
         this.#uf = valor;
+    }
+
+    toString() {
+        return `${this.#logradouro}, ${this.#numero} - ${this.#cidade}/${this.#uf}`;
     }
 
 

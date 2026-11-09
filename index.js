@@ -5,11 +5,15 @@ import PessoaJuridica from "./src/PessoaJuridica.js";
 // cria o array para guardar os dados
 const clientes = [];
 
+// função para cadastrar cliente
 function cadastrarCliente(tipo, dadosCliente, dadosEndereco)
 {
     try
     {
+        // inicia a variável para receber o cliente
         let cliente;
+
+        // 
         const endereco = new Endereco(dadosEndereco.logradouro, dadosEndereco.numero, dadosEndereco.cidade, dadosEndereco.uf);
         if(tipo.toLowerCase() == "pf")
         {
@@ -61,8 +65,8 @@ cadastrarCliente("PF",
 
 cadastrarCliente("pj", 
     {
-        "nome": "Lo",
-        "cnpj": "12.345.678/0001-90",
+        "nome": "Loja XPTO",
+        "cnpj": "72.743.347/0001-35",
         "razaoSocial": "XPTO Electric",
     }
     ,

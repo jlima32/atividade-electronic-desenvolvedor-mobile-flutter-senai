@@ -16,9 +16,9 @@ export default class Pessoa
 
     set nome(valor)
     {
-        if(valor.length < 3)
+        if(valor.length <= 3)
         {
-            throw new Error("Nome muito curto");
+            throw new Error("o nome deve ter ao menos 3 caracteres");
         }
         this.#nome = valor;
     }

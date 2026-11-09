@@ -19,6 +19,10 @@ export default class PessoaJuridica extends Pessoa
 
     set cnpj(valor)
     {
+        const somenteDigitos = String(valor).replace(/\D/g, "");
+        if (!/^\d{14}$/.test(somenteDigitos)) {
+            throw new Error("O CNPJ deve conter exatamente 14 dígitos.");
+        }
         this.#cnpj = valor;
     }
 
@@ -29,6 +33,11 @@ export default class PessoaJuridica extends Pessoa
 
     set razaoSocial(valor)
     {
+        if (valor.length < 1)
+        {
+            throw new Error("A razão social é obrigatória.") 
+        }
+        
         this.#razaoSocial = valor;
     }
 

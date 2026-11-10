@@ -32,21 +32,7 @@ function cadastrarCliente(tipo, dadosCliente, dadosEndereco)
 }
 
 
-cadastrarCliente("PF", 
-    {
-        "nome": "Maria Silva",
-        "cpf": "123",
-        "dataNascimento": "1995-04-20",
-    }
-    ,
-    {
-        "logradouro": "Rua das Flores",
-        "numero": "123",
-        "cidade": "São Paulo",
-        "uf": "SP"
-    }
-)
-
+//Pessoa Física Válida
 cadastrarCliente("PF", 
     {
         "nome": "Maria Silva",
@@ -63,10 +49,12 @@ cadastrarCliente("PF",
 )
 
 
+
+//Pessoa Jurídica Válida
 cadastrarCliente("pj", 
     {
         "nome": "Loja XPTO",
-        "cnpj": "72.743.347/0001-35",
+        "cnpj": "12.345.678/0001-12",
         "razaoSocial": "XPTO Electric",
     }
     ,
@@ -74,6 +62,39 @@ cadastrarCliente("pj",
         "logradouro": "Rua das Margaridas",
         "numero": "78",
         "cidade": "Taboão da Serra",
+        "uf": "SP"
+    }
+)
+
+//Pessoa Física Inválida
+cadastrarCliente("PF", 
+    {
+        "nome": "Maria Silva",
+        "cpf": "123.222.333-77",
+        "dataNascimento": "2035-04-20",
+    }
+    ,
+    {
+        "logradouro": "Rua das Flores",
+        "numero": "123",
+        "cidade": "São Paulo",
+        "uf": "SP"
+    }
+)
+
+
+//Pessoa Jurídica Inválida
+cadastrarCliente("pj", 
+    {
+        "nome": "Loja ABCDF",
+        "cnpj": "72.743.340001-35",
+        "razaoSocial": "ABCD Electric",
+    }
+    ,
+    {
+        "logradouro": "Rua da aviação",
+        "numero": "22",
+        "cidade": "Campinas",
         "uf": "SP"
     }
 )

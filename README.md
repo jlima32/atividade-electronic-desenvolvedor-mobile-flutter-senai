@@ -101,3 +101,5 @@ cadastrarCliente("pj",
 ![Testes](./teste.png)
 
 ### Histórico de commits
+
+![Commits](./commits.png)
